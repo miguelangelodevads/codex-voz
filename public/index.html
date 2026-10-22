@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1115" />
+  <title>Codex Voz</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Codex Voz</h1>
+      <select id="modelo" aria-label="Modelo"></select>
+    </header>
+
+    <div class="barra">
+      <button id="nova" class="secondary" type="button">Nova sessao</button>
+      <button id="voltar" class="secondary" type="button">Abrir no editor</button>
+      <label class="legenda-voz" for="vozToggle">
+        <input type="checkbox" id="vozToggle" /> responder falando
+      </label>
+    </div>
+
+    <div id="log" aria-live="polite"></div>
+    <div id="erro" role="alert"></div>
+
+    <form id="form">
+      <button id="mic" type="button" aria-label="Alternar reconhecimento de voz">falar</button>
+      <textarea id="texto" placeholder="Diga ou escreva o que construir..." rows="1"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
